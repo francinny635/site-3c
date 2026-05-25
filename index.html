@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café & Harmonia | Combinações Perfeitas</title>
+    <style>
+        /* Cores e Fontes Inspiradas em Cafeterias Modernas */
+        :root {
+            --cor-principal: #4a2c11; /* Marrom café profundo */
+            --cor-secundaria: #b5835a; /* Bege dourado */
+            --cor-fundo: #fdfaf6; /* Creme claro e aconchegante */
+            --cor-texto: #2b1a08; /* Escuro para leitura */
+            --cor-card: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-linear: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+            background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* Container Principal */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .introducao {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .introducao h2 {
+            font-size: 2.2rem;
+            color: var(--cor-principal);
+            margin-bottom: 15px;
+        }
+
+        /* Grade de Combinações (Cards) */
+        .grade-combinacoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* Estilo do Card */
+        .card {
+            background-color: var(--cor-card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0e6df;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(74, 44, 17, 0.15);
+        }
+
+        /* Imagens do Card */
+        .imagens-container {
+            display: flex;
+            height: 220px;
+            position: relative;
+        }
+
+        .img-metade {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .vs-badge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--cor-principal);
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            border: 2px solid var(--cor-fundo);
+        }
+
+        /* Conteúdo do Card */
+        .card-conteudo {
+            padding: 25px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background-color: #f5ebe0;
+            color: var(--cor-principal);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card-titulo {
+            font-size: 1.5rem;
+            color: var(--cor-principal);
+            margin-bottom: 10px;
+        }
+
+        .card-descricao {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Detalhes da harmonização */
+        .harmonizacao-detalhe {
+            background-color: #fcf8f5;
+            border-left: 4px solid var(--cor-secundaria);
+            padding: 10px 15px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .harmonizacao-detalhe strong {
+            color: var(--cor-principal);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--cor-principal);
+            color: #f5ebe0;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        footer p a {
+            color: var(--cor-secundaria);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Café & Harmonia</h1>
+        <p>A arte de combinar grãos selecionados com doces irresistíveis</p>
+    </header>
+
+    <main>
+        <section class="introducao">
+            <h2>Nossas Combinações Favoritas</h2>
+            <p>Descubra como o sabor do café certo pode elevar a experiência de saborear um bom bolo ou bolacha.</p>
+        </section>
+
+        <div class="grade-combinacoes">
+
+            <div class="card">
+                <div class="imagens-container">
+                    <img class="img-metade" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=500" alt="Café Espresso">
+                    <div class="vs-badge">+</div>
+                    <img class="img-metade" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=500" alt="Bolo de Chocolate">
+                </div>
+                <div class="card-conteudo">
+                    <span class="card-tag">Intenso & Marcante</span>
+                    <h3 class="card-titulo">Espresso + Bolo de Chocolate Belga</h3>
+                    <p class="card-descricao">O amargor e a alta intensidade do espresso tradicional cortam a doçura do chocolate encorpado, limpando o paladar a cada gole.</p>
+                    <div class="harmonizacao-detalhe">
+                        <strong>Por que funciona:</strong> O calor do café derrete o chocolate na boca, criando uma textura aveludada e única.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imagens-container">
+                    <img class="img-metade" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=500" alt="Café Latte">
+                    <div class="vs-badge">+</div>
+                    <img class="img-metade" src="https://images.unsplash.com/photo-1499636136210-6f4ce91a094f?auto=format&fit=crop&q=80&w=500" alt="Cookies de Baunilha">
+                </div>
+                <div class="card-conteudo">
+                    <span class="card-tag">Suave & Confortante</span>
+                    <h3 class="card-titulo">Caffè Latte + Cookies Americanos</h3>
+                    <p class="card-descricao">A cremosidade do leite vaporizado no Latte combina perfeitamente com a textura crocante por fora e macia por dentro dos cookies de baunilha com gotas de chocolate.</p>
+                    <div class="harmonizacao-detalhe">
+                        <strong>Dica de Ouro:</strong> Experimente molhar de leve o cookie na espuma do leite. Fica divino!
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imagens-container">
+                    <img class="img-metade" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=500" alt="Café Coado">
+                    <div class="vs-badge">+</div>
+                    <img class="img-metade" src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&q=80&w=500" alt="Bolo de Fubá">
+                </div>
+                <div class="card-conteudo">
+                    <span class="card-tag">Clássico de Vó</span>
+                    <h3 class="card-titulo">Café Coado + Bolo de Fubá Quentinho</h3>
+                    <p class="card-descricao">Aquele café passado na hora, com notas mais leves, equilibra perfeitamente com a textura do bolo de fubá com erva-doce ou pedaços de goiabada.</p>
+                    <div class="harmonizacao-detalhe">
+                        <strong>Por que funciona:</strong> É a combinação afetiva perfeita. O sabor limpo do coado não briga com a leveza do bolo.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imagens-container">
+                    <img class="img-metade" src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=500" alt="Cappuccino">
+                    <div class="vs-badge">+</div>
+                    <img class="img-metade" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=500" alt="Amanteigados">
+                </div>
+                <div class="card-conteudo">
+                    <span class="card-tag">Sofisticado</span>
+                    <h3 class="card-titulo">Cappuccino + Bolachas Amanteigadas</h3>
+                    <p class="card-descricao">O toque de canela e chocolate do cappuccino italiano tradicional realça o sabor rico e a textura que derrete na boca das legítimas bolachas de manteiga.</p>
+                    <div class="harmonizacao-detalhe">
+                        <strong>Por que funciona:</strong> A gordura boa da manteiga contrasta lindamente com a textura densa do cappuccino.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Café & Harmonia. Feito com ❤️ e muito cafeína.</p>
+    </footer>
+
+</body>
+</html>
