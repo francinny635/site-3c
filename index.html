@@ -33,6 +33,7 @@
             background-size: 24px 24px;
             color: var(--cor-texto);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Cabeçalho com fundo marrom e os emojis na vertical */
@@ -42,8 +43,8 @@
             text-align: center;
             padding: 80px 20px;
             border-bottom: 5px solid var(--cor-secundaria);
-            position: relative; /* Necessário para alinhar os emojis */
-            overflow: hidden; /* Não deixa os emojis saírem do quadrado marrom */
+            position: relative;
+            overflow: hidden;
         }
 
         /* Colunas verticais de emojis de café */
@@ -55,24 +56,19 @@
             flex-direction: column;
             justify-content: space-around;
             font-size: 1.8rem;
-            opacity: 0.15; /* Deixa os emojis clarinhos e transparentes para não sumir com o texto */
+            opacity: 0.15;
             user-select: none;
         }
 
-        .emoji-esquerda {
-            left: 20px;
-        }
-
-        .emoji-direita {
-            right: 20px;
-        }
+        .emoji-esquerda { left: 20px; }
+        .emoji-direita { right: 20px; }
 
         header h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
             font-family: 'Playfair Display', serif;
             position: relative;
-            z-index: 2; /* Deixa o título por cima dos emojis */
+            z-index: 2;
         }
 
         header p {
@@ -80,7 +76,7 @@
             font-style: italic;
             color: #f5ebe0;
             position: relative;
-            z-index: 2; /* Deixa o subtítulo por cima dos emojis */
+            z-index: 2;
         }
 
         /* Container Principal */
@@ -102,7 +98,7 @@
             margin-bottom: 15px;
         }
 
-        /* Grade de Combinações (Cards) */
+        /* Grade de Combinações */
         .grade-combinacoes {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -119,6 +115,7 @@
             border: 1px solid #f0e6df;
             display: flex;
             flex-direction: column;
+            position: relative; /* Para a mágica dos emojis flutuantes */
         }
 
         .card:hover {
@@ -190,6 +187,29 @@
             color: var(--cor-principal);
         }
 
+        /* Efeito de Emojis Flutuantes */
+        .emoji-voador {
+            position: absolute;
+            pointer-events: none;
+            font-size: 1.5rem;
+            z-index: 10;
+            animation: voarSubir 1.2s ease-out forwards;
+        }
+
+        @keyframes voarSubir {
+            0% {
+                transform: translateY(100px) scale(0.5);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-80px) translateX(var(--x-random)) scale(1.2);
+                opacity: 0;
+            }
+        }
+
         /* Rodapé */
         footer {
             background-color: var(--cor-principal);
@@ -212,7 +232,6 @@
 <body>
 
     <header>
-        <!-- Fileiras verticais de emojis criadas aqui! -->
         <div class="emoji-fundo emoji-esquerda">
             <span>☕</span>
             <span>☕</span>
@@ -238,7 +257,7 @@
         <div class="grade-combinacoes">
 
             <!-- Card 1 -->
-            <div class="card">
+            <div class="card" data-emojis="☕,🍰,🍫">
                 <div class="icones-container">
                     <span>☕</span>
                     <div class="vs-badge">+</div>
@@ -255,7 +274,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="card">
+            <div class="card" data-emojis="🥛,🍪,🍫">
                 <div class="icones-container">
                     <span>🥛</span>
                     <div class="vs-badge">+</div>
@@ -272,7 +291,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="card">
+            <div class="card" data-emojis="🫖,🥮,🌾">
                 <div class="icones-container">
                     <span>🫖</span>
                     <div class="vs-badge">+</div>
@@ -283,17 +302,3 @@
                     <h3 class="card-titulo">Café Coado + Bolo de Fubá Cremoso</h3>
                     <p class="card-descricao">Aquele café passado na hora, quentinho e leve, que traz o equilíbrio perfeito para a textura macia e o sabor afetivo de um bolo de fubá.</p>
                     <div class="harmonizacao-detalhe">
-                        <strong>Por que funciona:</strong> Combinação perfeita para o café da tarde que remete à infância.
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <footer>
-        <p>Desenvolvido com cafeína e carinho por <span class="assinatura-artista">FBW</span> ☕</p>
-    </footer>
-
-</body>
-</html>
