@@ -29,34 +29,31 @@
 
         body {
             background-color: var(--cor-fundo);
-            /* Efeito pontilhado bem sutil para o fundo ficar fofo */
             background-image: radial-gradient(rgba(74, 44, 17, 0.04) 1.5px, transparent 0);
             background-size: 24px 24px;
             color: var(--cor-texto);
             line-height: 1.6;
         }
 
-        /* Cabeçalho */
+        /* Cabeçalho minimalista para evitar links quebrados */
         header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com');
-            background-size: cover;
-            background-position: center;
+            background-color: var(--cor-principal);
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px;
+            border-bottom: 5px solid var(--cor-secundaria);
         }
 
         header h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
             font-family: 'Playfair Display', serif;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
 
         header p {
             font-size: 1.3rem;
             font-style: italic;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            color: #f5ebe0;
         }
 
         /* Container Principal */
@@ -81,7 +78,7 @@
         /* Grade de Combinações (Cards) */
         .grade-combinacoes {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
@@ -93,6 +90,8 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #f0e6df;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -100,37 +99,31 @@
             box-shadow: 0 10px 25px rgba(74, 44, 17, 0.15);
         }
 
-        /* Imagens do Card */
-        .imagens-container {
+        /* Container de Ícones (Substituindo as fotos que quebram) */
+        .icones-container {
             display: flex;
-            height: 220px;
-            position: relative;
-        }
-
-        .img-metade {
-            width: 50%;
-            height: 100%;
-            object-fit: cover;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5ebe0;
+            height: 140px;
+            font-size: 3.5rem;
+            gap: 15px;
+            border-bottom: 1px solid #eaddcf;
         }
 
         .vs-badge {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             background-color: var(--cor-principal);
             color: white;
             font-weight: bold;
-            padding: 8px 12px;
+            padding: 4px 10px;
             border-radius: 50%;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            border: 2px solid var(--cor-fundo);
+            font-size: 1rem;
         }
 
         /* Conteúdo do Card */
         .card-conteudo {
             padding: 25px;
+            flex-grow: 1;
         }
 
         .card-tag {
@@ -145,7 +138,7 @@
         }
 
         .card-titulo {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-family: 'Playfair Display', serif;
             color: var(--cor-principal);
             margin-bottom: 10px;
@@ -198,10 +191,10 @@
 
             <!-- Card 1 -->
             <div class="card">
-                <div class="imagens-container">
-                    <img class="img-metade" src="https://unsplash.com" alt="Café Espresso">
+                <div class="icones-container">
+                    <span>☕</span>
                     <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://unsplash.com" alt="Bolo de Chocolate">
+                    <span>🍰</span>
                 </div>
                 <div class="card-conteudo">
                     <span class="card-tag">Intenso & Marcante</span>
@@ -215,10 +208,10 @@
 
             <!-- Card 2 -->
             <div class="card">
-                <div class="imagens-container">
-                    <img class="img-metade" src="https://unsplash.com" alt="Café Latte">
+                <div class="icones-container">
+                    <span>🥛</span>
                     <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://unsplash.com" alt="Cookies de Baunilha">
+                    <span>🍪</span>
                 </div>
                 <div class="card-conteudo">
                     <span class="card-tag">Suave & Confortante</span>
@@ -232,10 +225,10 @@
 
             <!-- Card 3 -->
             <div class="card">
-                <div class="imagens-container">
-                    <img class="img-metade" src="https://unsplash.com" alt="Café Coado">
+                <div class="icones-container">
+                    <span>🫖</span>
                     <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://unsplash.com" alt="Bolo de Fubá">
+                    <span>🥮</span>
                 </div>
                 <div class="card-conteudo">
                     <span class="card-tag">Clássico de Vó</span>
