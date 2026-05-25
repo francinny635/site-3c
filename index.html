@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café & Harmonia | Combinações Perfeitas</title>
+    <title>☕Café.html | Combinações Perfeitas</title>
+    
+    <!-- Importando as novas fontes fofas e bonitas -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         /* Cores e Fontes Inspiradas em Cafeterias Modernas */
         :root {
@@ -18,19 +24,22 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Nova fonte padrão aplicada aqui */
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
             background-color: var(--cor-fundo);
+            /* Adicionado desenho de grãos de café bem clarinho ao fundo */
+            background-image: url('https://transparenttextures.com');
             color: var(--cor-texto);
             line-height: 1.6;
         }
 
         /* Cabeçalho */
         header {
-            background-linear: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
-            background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1920');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1920');
             background-size: cover;
             background-position: center;
             color: white;
@@ -41,7 +50,8 @@
         header h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
-            font-family: 'Georgia', serif;
+            /* Nova fonte bonita para o título principal */
+            font-family: 'Playfair Display', serif;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
 
@@ -64,7 +74,9 @@
         }
 
         .introducao h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
+            /* Nova fonte bonita para os títulos das seções */
+            font-family: 'Playfair Display', serif;
             color: var(--cor-principal);
             margin-bottom: 15px;
         }
@@ -136,7 +148,9 @@
         }
 
         .card-titulo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            /* Nova fonte bonita para os títulos dos cards */
+            font-family: 'Playfair Display', serif;
             color: var(--cor-principal);
             margin-bottom: 10px;
         }
@@ -179,7 +193,7 @@
 <body>
 
     <header>
-        <h1>Café & Harmonia</h1>
+        <h1>☕Café.html</h1>
         <p>A arte de combinar grãos selecionados com doces irresistíveis</p>
     </header>
 
@@ -191,6 +205,7 @@
 
         <div class="grade-combinacoes">
 
+            <!-- Card 1 -->
             <div class="card">
                 <div class="imagens-container">
                     <img class="img-metade" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=500" alt="Café Espresso">
@@ -207,11 +222,12 @@
                 </div>
             </div>
 
+            <!-- Card 2 (FOTO DO COOKIE CORRIGIDA AQUI!) -->
             <div class="card">
                 <div class="imagens-container">
                     <img class="img-metade" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=500" alt="Café Latte">
                     <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://images.unsplash.com/photo-1499636136210-6f4ce91a094f?auto=format&fit=crop&q=80&w=500" alt="Cookies de Baunilha">
+                    <img class="img-metade" src="https://unsplash.com" alt="Cookies de Baunilha">
                 </div>
                 <div class="card-conteudo">
                     <span class="card-tag">Suave & Confortante</span>
@@ -223,6 +239,7 @@
                 </div>
             </div>
 
+            <!-- Card 3 -->
             <div class="card">
                 <div class="imagens-container">
                     <img class="img-metade" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=500" alt="Café Coado">
@@ -231,26 +248,10 @@
                 </div>
                 <div class="card-conteudo">
                     <span class="card-tag">Clássico de Vó</span>
-                    <h3 class="card-titulo">Café Coado + Bolo de Fubá Quentinho</h3>
-                    <p class="card-descricao">Aquele café passado na hora, com notas mais leves, equilibra perfeitamente com a textura do bolo de fubá com erva-doce ou pedaços de goiabada.</p>
+                    <h3 class="card-titulo">Café Coado + Bolo de Fubá Cremoso</h3>
+                    <p class="card-descricao">Aquele café passado na hora, quentinho e leve, que traz o equilíbrio perfeito para a textura macia e o sabor afetivo de um bolo de fubá.</p>
                     <div class="harmonizacao-detalhe">
-                        <strong>Por que funciona:</strong> É a combinação afetiva perfeita. O sabor limpo do coado não briga com a leveza do bolo.
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="imagens-container">
-                    <img class="img-metade" src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=500" alt="Cappuccino">
-                    <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=500" alt="Amanteigados">
-                </div>
-                <div class="card-conteudo">
-                    <span class="card-tag">Sofisticado</span>
-                    <h3 class="card-titulo">Cappuccino + Bolachas Amanteigadas</h3>
-                    <p class="card-descricao">O toque de canela e chocolate do cappuccino italiano tradicional realça o sabor rico e a textura que derrete na boca das legítimas bolachas de manteiga.</p>
-                    <div class="harmonizacao-detalhe">
-                        <strong>Por que funciona:</strong> A gordura boa da manteiga contrasta lindamente com a textura densa do cappuccino.
+                        <strong>Por que funciona:</strong> Combinação perfeita para o café da tarde que remete à infância.
                     </div>
                 </div>
             </div>
@@ -259,7 +260,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Café & Harmonia. Feito com ❤️ e muito cafeína.</p>
+        <p>&copy; 2026 ☕Café.html - Todos os direitos reservados.</p>
     </footer>
 
 </body>
