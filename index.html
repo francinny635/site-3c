@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>☕Café.html | Combinações Perfeitas</title>
     
-    <!-- Fontes do Google -->
+    <!-- Importando fontes lindas do Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        /* Cores e Fontes Inspiradas em Cafeterias Modernas */
+        /* Cores Inspiradas em Cafeterias */
         :root {
             --cor-principal: #4a2c11; /* Marrom café profundo */
             --cor-secundaria: #b5835a; /* Bege dourado */
-            --cor-fundo: #fdfaf6; /* Creme claro e aconchegante */
             --cor-texto: #2b1a08; /* Escuro para leitura */
             --cor-card: #ffffff;
         }
@@ -24,160 +23,97 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: var(--cor-fundo);
-            /* Fundo sutil com um efeito leve */
-            background-image: radial-gradient(rgba(74, 44, 17, 0.03) 1px, transparent 0);
-            background-size: 24px 24px;
+            /* Fundo clarinho e fofo com padrão de grãos de café */
+            background-color: #fdfaf6;
+            background-image: url('https://unsplash.com'); /* Imagem sutil de fundo */
+            background-opacity: 0.05;
             color: var(--cor-texto);
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
         }
 
-        /* Cabeçalho */
+        /* Topo do Site */
         header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://unsplash.com') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 100px 20px;
         }
 
         header h1 {
+            font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             margin-bottom: 10px;
-            font-family: 'Playfair Display', serif;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
 
         header p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-style: italic;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
         }
 
-        /* Container Principal */
+        /* Seção Principal */
         main {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        .introducao {
+        .titulo-secao {
             text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .introducao h2 {
-            font-size: 2.5rem;
             font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
             color: var(--cor-principal);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-        /* Grade de Combinações (Cards) */
+        .subtitulo {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* Grade de Combinações */
         .grade-combinacoes {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        /* Estilo do Card */
         .card {
-            background-color: var(--cor-card);
+            background: var(--cor-card);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #f0e6df;
+            transition: transform 0.3s;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(74, 44, 17, 0.15);
         }
 
-        /* Imagens do Card */
-        .imagens-container {
-            display: flex;
-            height: 220px;
-            position: relative;
-        }
-
-        .img-metade {
-            width: 50%;
-            height: 100%;
+        .card img {
+            width: 100%;
+            height: 250px;
             object-fit: cover;
         }
 
-        .vs-badge {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: var(--cor-principal);
-            color: white;
-            font-weight: bold;
-            padding: 8px 12px;
-            border-radius: 50%;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            border: 2px solid var(--cor-fundo);
-        }
-
-        /* Conteúdo do Card */
         .card-conteudo {
-            padding: 25px;
+            padding: 20px;
         }
 
-        .card-tag {
-            display: inline-block;
-            background-color: #f5ebe0;
-            color: var(--cor-principal);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .card-titulo {
-            font-size: 1.6rem;
+        .card-conteudo h3 {
             font-family: 'Playfair Display', serif;
             color: var(--cor-principal);
+            font-size: 1.4rem;
             margin-bottom: 10px;
         }
 
-        .card-descricao {
+        .card-conteudo p {
             font-size: 0.95rem;
             color: #555;
-            margin-bottom: 20px;
-        }
-
-        /* Detalhes da harmonização */
-        .harmonizacao-detalhe {
-            background-color: #fcf8f5;
-            border-left: 4px solid var(--cor-secundaria);
-            padding: 10px 15px;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.9rem;
-        }
-
-        .harmonizacao-detalhe strong {
-            color: var(--cor-principal);
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: var(--cor-principal);
-            color: #f5ebe0;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -189,70 +125,47 @@
     </header>
 
     <main>
-        <section class="introducao">
-            <h2>Nossas Combinações Favoritas</h2>
-            <p>Descubra como o sabor do café certo pode elevar a experiência de saborear um bom bolo ou bolacha.</p>
-        </section>
+        <h2 class="titulo-secao">Nossas Combinações Favoritas</h2>
+        <p class="subtitulo">Descubra como o sabor do café certo pode elevar a experiência de saborear um bom bolo ou bolacha.</p>
 
         <div class="grade-combinacoes">
-
-            <!-- Card 1 -->
+            <!-- Combinação 1 -->
             <div class="card">
-                <div class="imagens-container">
-                    <img class="img-metade" src="https://unsplash.com" alt="Café Espresso">
-                    <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://unsplash.com" alt="Bolo de Chocolate">
-                </div>
+                <img src="https://unsplash.com" alt="Café Espresso e Bolo de Chocolate">
                 <div class="card-conteudo">
-                    <span class="card-tag">Intenso & Marcante</span>
-                    <h3 class="card-titulo">Espresso + Bolo de Chocolate Belga</h3>
-                    <p class="card-descricao">O amargor e a alta intensidade do espresso tradicional cortam a doçura do chocolate encorpado, limpando o paladar a cada gole.</p>
-                    <div class="harmonizacao-detalhe">
-                        <strong>Por que funciona:</strong> O calor do café derrete o chocolate na boca, criando uma textura aveludada e única.
-                    </div>
+                    <h3>Espresso & Bolo de Chocolate</h3>
+                    <p>A intensidade do espresso curto equilibra perfeitamente com a doçura e a cremosidade de um bolo de chocolate intenso.</p>
                 </div>
             </div>
 
-            <!-- Card 2 (CORRIGIDO E TESTADO!) -->
+            <!-- Combinação 2 (FOTO DO COOKIE ARRUMADA!) -->
             <div class="card">
-                <div class="imagens-container">
-                    <img class="img-metade" src="https://unsplash.com" alt="Café Latte">
-                    <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://unsplash.com" alt="Cookies de Baunilha">
-                </div>
+                <img src="https://unsplash.com" alt="Cookies de Baunilha e Cappuccino">
                 <div class="card-conteudo">
-                    <span class="card-tag">Suave & Confortante</span>
-                    <h3 class="card-titulo">Caffè Latte + Cookies Americanos</h3>
-                    <p class="card-descricao">A cremosidade do leite vaporizado no Latte combina perfeitamente com a textura crocante por fora e macia por dentro dos cookies de baunilha com gotas de chocolate.</p>
-                    <div class="harmonizacao-detalhe">
-                        <strong>Dica de Ouro:</strong> Experimente molhar de leve o cookie na espuma do leite. Fica divino!
-                    </div>
+                    <h3>Cappuccino & Cookies de Baunilha</h3>
+                    <p>A espuma cremosa do cappuccino quentinho combina perfeitamente com a textura crocante e gotinhas de chocolate do cookie.</p>
                 </div>
             </div>
 
-            <!-- Card 3 -->
+            <!-- Combinação 3 (NOVA!) -->
             <div class="card">
-                <div class="imagens-container">
-                    <img class="img-metade" src="https://unsplash.com" alt="Café Coado">
-                    <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://unsplash.com" alt="Bolo de Fubá">
-                </div>
+                <img src="https://unsplash.com" alt="Café Coado e Bolo de Fubá">
                 <div class="card-conteudo">
-                    <span class="card-tag">Clássico de Vó</span>
-                    <h3 class="card-titulo">Café Coado + Bolo de Fubá Cremoso</h3>
-                    <p class="card-descricao">Aquele café passado na hora, quentinho e leve, que traz o equilíbrio perfeito para a textura macia e o sabor afetivo de um bolo de fubá.</p>
-                    <div class="harmonizacao-detalhe">
-                        <strong>Por que funciona:</strong> Combinação perfeita para o café da tarde que remete à infância.
-                    </div>
+                    <h3>Café Coado & Bolo de Fubá</h3>
+                    <p>Aquele clássico sabor de tarde na casa da avó. Um café passado na hora bem leve com um bolo de fubá quentinho.</p>
                 </div>
             </div>
 
+            <!-- Combinação 4 (NOVA!) -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="Macchiato e Bolacha Amanteigada">
+                <div class="card-conteudo">
+                    <h3>Macchiato & Bolachas Amanteigadas</h3>
+                    <p>O toque leve de leite manchando o café combina com a suavidade que derrete na boca das bolachas amanteigadas.</p>
+                </div>
+            </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 ☕Café.html - Todos os direitos reservados.</p>
-    </footer>
 
 </body>
 </html>
