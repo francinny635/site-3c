@@ -24,22 +24,21 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            /* Nova fonte padrão aplicada aqui */
             font-family: 'Poppins', sans-serif;
         }
 
         body {
             background-color: var(--cor-fundo);
-            /* Adicionado desenho de grãos de café bem clarinho ao fundo */
-            background-image: url('https://transparenttextures.com');
+            /* Imagem com padrão de grãos de café sutil e clarinha */
+            background-image: url('https://transparenttextures.com'), linear-gradient(rgba(253, 250, 246, 0.9), rgba(253, 250, 246, 0.9)), url('https://unsplash.com');
+            background-repeat: repeat;
             color: var(--cor-texto);
             line-height: 1.6;
         }
 
         /* Cabeçalho */
         header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1920');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com');
             background-size: cover;
             background-position: center;
             color: white;
@@ -50,7 +49,6 @@
         header h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
-            /* Nova fonte bonita para o título principal */
             font-family: 'Playfair Display', serif;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
@@ -75,7 +73,6 @@
 
         .introducao h2 {
             font-size: 2.5rem;
-            /* Nova fonte bonita para os títulos das seções */
             font-family: 'Playfair Display', serif;
             color: var(--cor-principal);
             margin-bottom: 15px;
@@ -149,7 +146,6 @@
 
         .card-titulo {
             font-size: 1.6rem;
-            /* Nova fonte bonita para os títulos dos cards */
             font-family: 'Playfair Display', serif;
             color: var(--cor-principal);
             margin-bottom: 10px;
@@ -183,11 +179,6 @@
             margin-top: 60px;
             font-size: 0.9rem;
         }
-
-        footer p a {
-            color: var(--cor-secundaria);
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
@@ -208,9 +199,9 @@
             <!-- Card 1 -->
             <div class="card">
                 <div class="imagens-container">
-                    <img class="img-metade" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=500" alt="Café Espresso">
+                    <img class="img-metade" src="https://unsplash.com" alt="Café Espresso">
                     <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=500" alt="Bolo de Chocolate">
+                    <img class="img-metade" src="https://unsplash.com" alt="Bolo de Chocolate">
                 </div>
                 <div class="card-conteudo">
                     <span class="card-tag">Intenso & Marcante</span>
@@ -222,10 +213,10 @@
                 </div>
             </div>
 
-            <!-- Card 2 (FOTO DO COOKIE CORRIGIDA AQUI!) -->
+            <!-- Card 2 (CORRIGIDO: Nova foto do cookie funcionando perfeitamente) -->
             <div class="card">
                 <div class="imagens-container">
-                    <img class="img-metade" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=500" alt="Café Latte">
+                    <img class="img-metade" src="https://unsplash.com" alt="Café Latte">
                     <div class="vs-badge">+</div>
                     <img class="img-metade" src="https://unsplash.com" alt="Cookies de Baunilha">
                 </div>
@@ -242,9 +233,9 @@
             <!-- Card 3 -->
             <div class="card">
                 <div class="imagens-container">
-                    <img class="img-metade" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=500" alt="Café Coado">
+                    <img class="img-metade" src="https://unsplash.com" alt="Café Coado">
                     <div class="vs-badge">+</div>
-                    <img class="img-metade" src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&q=80&w=500" alt="Bolo de Fubá">
+                    <img class="img-metade" src="https://unsplash.com" alt="Bolo de Fubá">
                 </div>
                 <div class="card-conteudo">
                     <span class="card-tag">Clássico de Vó</span>
