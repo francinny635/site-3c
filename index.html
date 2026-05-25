@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>☕Café.html | Combinações Perfeitas</title>
     
-    <!-- Fontes do Google -->
+    <!-- Fontes do Google (Adicionei a Dancing Script para a sua assinatura) -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         /* Cores e Fontes Inspiradas em Cafeterias Modernas */
@@ -35,7 +35,7 @@
             line-height: 1.6;
         }
 
-        /* Cabeçalho minimalista para evitar links quebrados */
+        /* Cabeçalho */
         header {
             background-color: var(--cor-principal);
             color: white;
@@ -99,7 +99,7 @@
             box-shadow: 0 10px 25px rgba(74, 44, 17, 0.15);
         }
 
-        /* Container de Ícones (Substituindo as fotos que quebram) */
+        /* Container de Ícones */
         .icones-container {
             display: flex;
             justify-content: center;
@@ -170,7 +170,16 @@
             text-align: center;
             padding: 30px 20px;
             margin-top: 60px;
-            font-size: 0.9rem;
+            font-size: 1.1rem; /* Aumentei um pouquinho o tamanho para a assinatura aparecer bem */
+        }
+
+        /* Estilo especial para a sua assinatura de artista */
+        .assinatura-artista {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: var(--cor-secundaria);
+            display: inline-block;
+            margin-left: 5px;
         }
     </style>
 </head>
@@ -243,8 +252,9 @@
         </div>
     </main>
 
+    <!-- Rodapé atualizado com a sua assinatura em letra de mão fofa! -->
     <footer>
-        <p>&copy; 2026 ☕Café.html - Todos os direitos reservados.</p>
+        <p>Desenvolvido com cafeína e carinho por <span class="assinatura-artista">FBW</span> ☕</p>
     </footer>
 
 </body>
