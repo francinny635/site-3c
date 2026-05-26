@@ -302,3 +302,28 @@
                     <h3 class="card-titulo">Café Coado + Bolo de Fubá Cremoso</h3>
                     <p class="card-descricao">Aquele café passado na hora, quentinho e leve, que traz o equilíbrio perfeito para a textura macia e o sabor afetivo de um bolo de fubá.</p>
                     <div class="harmonizacao-detalhe">
+
+                        document.querySelectorAll('.card').forEach(card => {
+card.addEventListener('mousemove', (e) => {
+// Cria emoji só de vez em quando no movimento pra não travar o celular
+if (Math.random() > 0.12) return;
+const listaEmojis = card.getAttribute('data-emojis').split(',');
+const emojiSorteado = listaEmojis[Math.floor(Math.random() * listaEmojis.length)];
+const espacoCard = card.getBoundingClientRect();
+const x = e.clientX - espacoCard.left;
+const y = e.clientY - espacoCard.top;
+const elementoEmoji = document.createElement('span');
+elementoEmoji.classList.add('emoji-voador');
+elementoEmoji.innerText = emojiSorteado;
+elementoEmoji.style.left = x + 'px';
+elementoEmoji.style.top = y + 'px';
+// Joga os emojis um pouco para a esquerda ou direita aleatoriamente
+const direcaoX = (Math.random() * 80 - 40) + 'px';
+elementoEmoji.style.setProperty('--x-random', direcaoX);
+card.appendChild(elementoEmoji);
+// Deleta o emoji depois de 1 segundo para o site continuar leve
+setTimeout(() => {
+elementoEmoji.remove();
+}, 1000);
+});
+});
